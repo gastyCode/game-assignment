@@ -1,1 +1,1 @@
-# jumper-game
+# game-assignment
