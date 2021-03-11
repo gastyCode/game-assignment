@@ -22,6 +22,7 @@ public class Stomper : MonoBehaviour
     {
         if(other.gameObject.tag == "Hitbox")
         {
+            AudioManager.instance.Play("Enemy");
             other.gameObject.GetComponent<EnemyLives>().TakeDamage(damage);
             rb.AddForce(transform.up * bounceForce, ForceMode2D.Impulse);
             ScoreManager.AddScore(score);

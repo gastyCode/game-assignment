@@ -24,6 +24,7 @@ public class RunningEnemy : MonoBehaviour
         if(rb.position.x - target.position.x <= distanceBetween && once == true)
         {
             once = false;
+            AudioManager.instance.Play("Wheatman");
             gameObject.GetComponent<Renderer>().enabled = true;
             moving = true;
         }
@@ -53,6 +54,7 @@ public class RunningEnemy : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
+            AudioManager.instance.Play("Hurt");
             GameController.RestartLevel();
         }
     }

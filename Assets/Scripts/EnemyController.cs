@@ -32,6 +32,7 @@ public class EnemyController : MonoBehaviour
     {
         if(other.transform.tag == "Player")
         {
+            AudioManager.instance.Play("Hurt");
             GameController.RestartLevel();
         }
     }

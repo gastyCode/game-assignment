@@ -84,7 +84,7 @@ public class ScoreManager : MonoBehaviour
     {
         if(other.transform.tag == "Points")
         {
-            FindObjectOfType<AudioManager>().Play("Coin");
+            AudioManager.instance.Play("Coin");
             AddScore(1);
             Destroy(other.gameObject);
         }

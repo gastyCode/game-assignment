@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jumpTimer = Time.time + jumpDelay;
+            AudioManager.instance.Play("Jump");
         }
         direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && isFiringEnabled == true)
         {
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+            AudioManager.instance.Play("Fire");
         }
     }
     void FixedUpdate()
