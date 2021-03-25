@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     public static void RestartLevel()
     {
         ResetStats();
+        AudioManager.instance.StopPlaying("Bee");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

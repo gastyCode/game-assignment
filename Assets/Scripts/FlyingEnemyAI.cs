@@ -14,6 +14,7 @@ public class FlyingEnemyAI : MonoBehaviour
     Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
+    bool once = true;
 
     Seeker seeker;
     private Rigidbody2D rb;
@@ -49,6 +50,12 @@ public class FlyingEnemyAI : MonoBehaviour
     {
         if (Mathf.Abs(rb.position.x - target.position.x) <= distanceBetween)
         {
+            if(once == true)
+            {
+                once = false;
+                AudioManager.instance.Play("Bee");
+            }
+            
             if (path == null)
             {
                 return;
@@ -74,7 +81,7 @@ public class FlyingEnemyAI : MonoBehaviour
             {
                 currentWaypoint++;
             }
-
+            
             if (rb.velocity.x >= 0.01f)
             {
                 rb.transform.localScale = new Vector3(-1f, 1f, 1f);

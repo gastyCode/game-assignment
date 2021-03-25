@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
         if(other.transform.tag == "Enemy")
         {
             ScoreManager.AddScore(score);
+            AudioManager.instance.StopPlaying("Bee");
             Destroy(other.gameObject);
         }
         Destroy(gameObject);
