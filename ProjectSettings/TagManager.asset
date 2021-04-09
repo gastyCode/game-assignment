@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Hitbox
   - Magnet
+  - Platform
   layers:
   - Default
   - TransparentFX
