@@ -3,8 +3,6 @@ using Pathfinding;
 
 public class FlyingEnemyAI : MonoBehaviour
 {
-    private Vector2 start;
-    
     public Transform target;
 
     public float speed = 200f;
@@ -14,7 +12,7 @@ public class FlyingEnemyAI : MonoBehaviour
     Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
-    bool once = true;
+    bool sound = true;
 
     Seeker seeker;
     private Rigidbody2D rb;
@@ -23,8 +21,6 @@ public class FlyingEnemyAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = transform.GetComponent<Rigidbody2D>();
-
-        start = rb.position;
 
         InvokeRepeating("UpdatePath", 0f, .5f);
     }
@@ -50,9 +46,9 @@ public class FlyingEnemyAI : MonoBehaviour
     {
         if (Mathf.Abs(rb.position.x - target.position.x) <= distanceBetween)
         {
-            if(once == true)
+            if(sound == true)
             {
-                once = false;
+                sound = false;
                 AudioManager.instance.Play("Bee");
             }
             
@@ -93,7 +89,11 @@ public class FlyingEnemyAI : MonoBehaviour
         }
         else
         {
-            rb.MovePosition(start);
+            if (sound == false)
+            {
+                sound = true;
+                AudioManager.instance.StopPlaying("Bee");
+            }
         }
     }
 

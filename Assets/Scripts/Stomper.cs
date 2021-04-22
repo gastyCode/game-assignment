@@ -13,11 +13,6 @@ public class Stomper : MonoBehaviour
         rb = transform.parent.GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Hitbox")
@@ -27,6 +22,12 @@ public class Stomper : MonoBehaviour
             other.gameObject.GetComponent<EnemyLives>().TakeDamage(damage);
             rb.AddForce(transform.up * bounceForce, ForceMode2D.Impulse);
             ScoreManager.AddScore(score);
+        }else if(other.gameObject.tag == "BossHitbox")
+        {
+            AudioManager.instance.Play("Enemy");
+            Boss.lives--;
+            other.gameObject.GetComponent<EnemyLives>().TakeDamage(damage);
+            rb.AddForce(transform.up * bounceForce, ForceMode2D.Impulse);
         }
     }
 }

@@ -4,10 +4,15 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     public Slider slider;
+    public Toggle toggle;
 
     private void Start()
     {
         slider.SetValueWithoutNotify(AudioManager.volume);
+        if (!AudioManager.isFullscreen)
+        {
+            toggle.isOn = false;
+        }
     }
 
     public static void SetVolume(float volume)
@@ -15,8 +20,9 @@ public class SettingsMenu : MonoBehaviour
         AudioManager.volume = volume;
     }
 
-    public void SetFullscreen(bool isFullscreen)
+    public static void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        AudioManager.isFullscreen = isFullscreen;
     }
 }

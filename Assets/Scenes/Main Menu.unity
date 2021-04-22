@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 446315058}
+  toggle: {fileID: 608214725}
 --- !u!1 &108231568
 GameObject:
   m_ObjectHideFlags: 0

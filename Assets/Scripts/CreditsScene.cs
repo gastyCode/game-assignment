@@ -9,6 +9,7 @@ public class CreditsScene : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        AudioManager.instance.Play("Song");
         StartCoroutine(Wait(animationTime));
     }
 
@@ -16,6 +17,7 @@ public class CreditsScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            AudioManager.instance.StopPlaying("Song");
             GameController.GoToMenu();
         }
     }
@@ -23,6 +25,7 @@ public class CreditsScene : MonoBehaviour
     IEnumerator Wait(float animationTime)
     {
         yield return new WaitForSeconds(animationTime);
+        AudioManager.instance.StopPlaying("Song");
         GameController.GoToMenu();
     }
 }

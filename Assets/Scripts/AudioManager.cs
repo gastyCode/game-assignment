@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
 	public static AudioManager instance;
 	public static float volume = 1f;
 
+	public static bool isFullscreen = true;
+
 	public Sound[] sounds;
 
 	void Awake()
@@ -38,7 +40,7 @@ public class AudioManager : MonoBehaviour
 		}
 
 		//s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-		s.source.volume = volume;
+		s.source.volume = s.volume * volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
 		s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
 		s.source.Play();
@@ -54,7 +56,7 @@ public class AudioManager : MonoBehaviour
 		}
 
 		//s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-		s.source.volume = volume;
+		s.source.volume = s.volume * volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
 		s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
 		s.source.Stop();

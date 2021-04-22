@@ -172,6 +172,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Lava"))
         {
+            Boss.lives = 3;
             GameController.RestartLevel();
         }
     }

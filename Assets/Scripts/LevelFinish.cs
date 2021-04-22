@@ -11,6 +11,7 @@ public class LevelFinish : MonoBehaviour
         if (other.transform.tag == "Player")
         {
             animator.SetBool("isTouched", true);
+            AudioManager.instance.Play("Win");
             StartCoroutine(Wait(animationTime));
         }
     }
