@@ -46,7 +46,105 @@ MonoBehaviour:
   sounds:
   - name: Coin
     clip: {fileID: 8300000, guid: a0f1923474f065d43964a0ce953a0022, type: 3}
-    volume: 0.9
+    volume: 1
+    volumeVariance: 0.1
     pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy
+    clip: {fileID: 8300000, guid: 24121a9297dc92147bb8e4ee3c377f4f, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bee
+    clip: {fileID: 8300000, guid: 1949db3aa6a0d0c4fab8335b7ebe25f6, type: 3}
+    volume: 0.9
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    source: {fileID: 0}
+  - name: Fire
+    clip: {fileID: 8300000, guid: 99bf47958228ce6439f7fb6d776b0f46, type: 3}
+    volume: 0.8
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Eye
+    clip: {fileID: 8300000, guid: b47f5d63a77730f4ab1eda202fe935c0, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    source: {fileID: 0}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: ca0c97c899385ec4d99e4f8fb208709c, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ice Cracking
+    clip: {fileID: 8300000, guid: 5f201833242139b4fba5ee62e134cec7, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Icicle
+    clip: {fileID: 8300000, guid: 879a51d627fa6904d88f9a4a574560c8, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 3f51c7fba2a28fb4db7ceaf0d7c0b05e, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Magic
+    clip: {fileID: 8300000, guid: 2665047aa7381ed419b1d6ebd1d4f7e1, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Song
+    clip: {fileID: 8300000, guid: 13771292ad1a25a4d8f37e5077de86cb, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Wheatman
+    clip: {fileID: 8300000, guid: 05290271756adf2458768aaaf3a4df6f, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 625d162f3e4b4c147935a3da0f221831, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
     loop: 0
     source: {fileID: 0}
